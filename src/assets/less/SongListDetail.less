@@ -1,0 +1,102 @@
+.songlist-detail {
+  display: flex;
+  .songlist-cover {
+    width: 180px;
+    min-width: 180px;
+    height: 180px;
+  }
+  .songlist-info {
+    margin-left: 20px;
+
+    .songlist-info-author {
+      margin-top: 10px;
+      display: flex;
+      line-height: 24px;
+      .author-img {
+        width: 24px;
+        height: 24px;
+        background-color: skyblue;
+        border-radius: 50%;
+        margin-right: 10px;
+        overflow: hidden;
+      }
+    }
+    .buttons {
+      margin: 5px 0;
+    }
+    .label,
+    .songnum {
+      margin-bottom: 5px;
+    }
+    // 实现简介收起与展开
+    .introduction {
+      max-width: 800px;
+      max-height: 20px;
+      transition: max-height 1s;
+
+      p {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    input[type="checkbox"] {
+      position: absolute;
+      clip: rect(0 0 0 0);
+    }
+    .brief {
+      min-width: 850px;
+      position: relative;
+      .check-in,
+      .check-out {
+        position: absolute;
+        right: 20px;
+        top: 0px;
+      }
+    }
+
+    //收起
+
+    .check-in {
+      display: inline-block;
+    }
+    .check-out {
+      display: none;
+    }
+    //展开
+    :checked ~ .introduction {
+      max-height: inherit;
+
+      p {
+        display: block;
+        text-overflow: initial;
+        white-space: pre-line;
+      }
+    }
+    :checked ~ .check-in {
+      display: none;
+    }
+    :checked ~ .check-out {
+      display: inline-block;
+    }
+  }
+}
+.songlist-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 666px;
+  .search {
+    .el-input .el-input__inner {
+      height: 32px;
+      line-height: 32px;
+      border-radius: 16px;
+      border-color: #fdf5f5;
+      background-color: #f7f7f7;
+    }
+    .el-input__icon {
+      line-height: 32px;
+    }
+  }
+}

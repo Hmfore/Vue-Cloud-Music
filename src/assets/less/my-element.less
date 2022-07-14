@@ -1,0 +1,77 @@
+// 选项样式
+.el-radio__input.is-checked + .el-radio__label {
+  color: #ec4141;
+}
+
+.el-radio {
+  text-align: center;
+  &:hover {
+    color: #000;
+    font-weight: bold;
+  }
+}
+.el-radio__inner {
+  display: none;
+}
+.el-radio.is-checked {
+  background-color: #fdf5f5;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.el-radio__label {
+  padding: 0;
+}
+// 分页样式
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: red;
+  &:hover {
+    color: white;
+  }
+}
+.el-pagination.is-background .el-pager li:not(.disabled) {
+  &:hover {
+    color: red;
+  }
+}
+//歌单搜索框
+.detail-search {
+  .el-input > .el-input__inner {
+    height: 32px;
+    line-height: 32px;
+    border-radius: 16px;
+    border-color: #fdf5f5;
+    background-color: #f7f7f7;
+  }
+  .el-input__icon {
+    line-height: 32px;
+  }
+}
+.sliderbar {
+  /*滚动条样式*/
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+  }
+  &::-webkit-scrollbar-track {
+    // box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    background: transparent;
+  }
+}
+//使el-table在音量调节器的下方
+.el-table--border::after,
+.el-table--group::after,
+.el-table::before {
+  z-index: 0;
+}
+.addmusicdialog {
+  .el-dialog .el-dialog__body {
+    height: 480px;
+    overflow-y: auto;
+  }
+}
