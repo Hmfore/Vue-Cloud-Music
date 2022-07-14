@@ -1,5 +1,5 @@
 <template>
-  <div class="personal-fm">
+  <div class="personal-fm mw-760">
     <div class="playview-wrap mtop-20">
       <div class="playview-left">
         <div class="img-wrap">
@@ -268,29 +268,6 @@ export default {
     margin-top: 10px;
     .btn-a {
       color: #5d86b5;
-    }
-  }
-}
-@media screen and (max-width: 415px) {
-  .personal-fm {
-    width: 100%;
-  }
-  .playview-wrap {
-    display: block;
-  }
-  .playview-left {
-    margin: 0 auto;
-  }
-  .playview-right {
-    margin: 0 auto;
-    width: 100%;
-    .title {
-      display: flex;
-      justify-content: center;
-    }
-    .info {
-      display: flex;
-      justify-content: space-around;
     }
   }
 }
